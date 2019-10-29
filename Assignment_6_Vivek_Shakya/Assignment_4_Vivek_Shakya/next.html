@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+        <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        th,td{
+            border:1px solid black;
+            text-align: center;
+            
+        }
+    </style>
+    
+</head>
+<body>
+
+    <table cellpadding ="2" style="border: 1px solid black; border-collapse: collapse;">
+        <tr>
+                <th>Data Fields</th>
+                <th>Data Values</th>
+
+        </tr>
+        <tr>
+                <td>
+                    Title
+                </td>
+                <td id = "title">
+    
+                </td>
+                
+            </tr>
+        <tr>
+            <td>
+                First Name
+            </td>
+            <td id = "first-name">
+
+            </td>
+            
+        </tr>
+        <tr>
+                <td>
+                    Last Name
+                </td>
+                <td id = "last-name">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Email-Id
+                </td>
+                <td id = "email-id">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Phone Number
+                </td>
+                <td id = "phone_number">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Zip Code
+                </td>
+                <td id = "zip-code">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Area
+                </td>
+                <td id = "area">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Facilities
+                </td>
+                <td id = "facilities">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Street Address
+                </td>
+                <td id = "addr">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Source
+                </td>
+                <td id = "source">
+    
+                </td>
+                
+        </tr>
+        <tr>
+                <td>
+                    Comments
+                </td>
+                <td id = "comments">
+    
+                </td>
+                
+        </tr>
+        
+    </table>
+    
+    <div id ="data"></div>
+
+    <script
+	  src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script >
+      $(document).ready(function() {
+          //alert("hello");
+        $("#title").text(window.localStorage.getItem('title'));
+        $("#first-name").text(window.localStorage.getItem('first_name'));
+        $("#last-name").text(window.localStorage.getItem('last_name'));
+        $("#email-id").text(window.localStorage.getItem('email'));
+        $("#phone_number").text(window.localStorage.getItem('phone'));
+        $("#zip-code").text(window.localStorage.getItem('zipcode'));
+        $("#area").text(window.localStorage.getItem('area'));
+        $("#addr").text(window.localStorage.getItem('street'));
+        $("#source").text(window.localStorage.getItem('source'));
+        $("#comments").text(window.localStorage.getItem('comments'));
+        $("#facilities").text(window.localStorage.getItem('facilities'));
+
+
+    });
+       
+          /* function form_data(){
+    
+    document.getElementById("first-name").innerHTML = window.localStorage.getItem('first_name');
+    document.getElementById("last-name").innerHTML=window.localStorage.getItem('last_name');
+    document.getElementById("email-id").innerHTML=window.localStorage.getItem('email');
+    document.getElementById("phone_number").innerHTML=window.localStorage.getItem('phone');
+    document.getElementById("zip-code").innerHTML=window.localStorage.getItem('zipcode');
+    document.getElementById("area").innerHTML=window.localStorage.getItem('area');
+    document.getElementById("addr").innerHTML=window.localStorage.getItem('street');
+    $("#title").text(window.localStorage.getItem('title'));
+    document.getElementById("source").innerHTML=window.localStorage.getItem('source');
+    document.getElementById("comments").innerHTML=window.localStorage.getItem('comments');
+    document.getElementById("facilities").innerHTML=window.localStorage.getItem('facilities');
+
+
+
+
+
+
+}
+           window.onload = form_data();*/
+            
+
+           
+    </script>
+</body>
+</html>

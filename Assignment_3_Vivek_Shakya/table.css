@@ -1,0 +1,55 @@
+#awardsTable{
+    border:2px solid green;
+	border-collapse: collapse;
+	margin: 30px 30px 20px 40px;
+	display: table;
+
+}
+#awardsTable td,th{
+    border:1px solid green;
+	padding: 5px;
+	
+}
+
+#awardsTable th {
+	color: #fff;
+	background-color: #a7c942;
+}
+
+.enable {
+	color:#fff;
+	background-color: orange;
+	border-radius: 3px;
+	border:2px solid orange;
+	margin-left: 180px;
+}
+.disable
+{
+    
+	border-radius: 3px;
+	
+	margin-left: 180px;
+}
+
+
+
+
+
+.active{
+    background-color:yellow;
+ }
+
+
+.hide{
+	display:none;
+	
+    
+}
+.show{
+	display: table-cell;
+	
+    
+}
+
+
+

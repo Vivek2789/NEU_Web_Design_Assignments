@@ -1,0 +1,108 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "viewport" content ="width=device-width, initial-scale=1.0">
+        <link rel = "stylesheet" type = "text/css" href="table.css">
+        <title>Assignment-3</title>
+        <style>
+           
+        </style>
+        
+    </head>
+<body>
+
+     <h2>Table</h2>
+
+     <table id ="awardsTable">
+         <thead>
+                <tr>
+                        <th></th>
+                        
+                        <th>Student</th>
+                        <th>Advisor</th>
+                        <th>Award Status</th>
+                        <th>Semester</th>
+                        <th>Type</th>
+                        <th>Budget</th>
+                        <th>Percentage</th>
+                        <th>Delete</th>
+                        
+                </tr>
+                
+                
+         </thead>
+         <tbody>
+         <tr >
+             
+             <td><input type="checkbox" name="select_row" value="select_row" onchange="row_highlight(this)"><br/>
+                <img src = "down-arrow.png" width = "20" height = "20" onclick="rowExpand(this)"></td>
+             
+             <td>Priyank</td>
+             <td>Daniel</td>
+             <td>Approved</td>
+             <td>1</td>
+             <td>TA</td>
+             <td>4000</td>
+             <td>100</td>
+             <td class="hide"><input type="button" value="delete" onclick="delete_Row(this)" /></td>
+             
+         </tr>
+         <tr  class = "hide">
+                <td colspan ="9"  ><p>Advisor1: <br/><br/>Award Details:<br/> Summer 1-2014(TA)<br/>
+                Budget Number<br/>Tuition Number<br/><br/>Comments:<br/></p></td>
+         </tr>
+         
+        <tr  >
+                        
+        <td><input type="checkbox" name="select_row" value="select_row" onchange="row_highlight(this)">
+                    <br/><img src = "down-arrow.png" width = "20" height = "20" onclick="rowExpand(this)">
+        </td>
+                        <td>Shrijith</td>
+                        <td>Charlie</td>
+                        <td>Approved</td>
+                        <td>1</td>
+                        <td>TA</td>
+                        <td>5000</td>
+                        <td>75</td>
+                        <td class ="hide"><input type="button" value="delete" onclick="delete_Row(this)" /></td>
+        </tr>
+        <tr class = "hide" >
+                        <td colspan ="9"  ><p>Advisor2: <br/><br/>Award Details:<br/> Summer 1-2014(TA)<br/>
+                        Budget Number<br/>Tuition Number<br/><br/>Comments:<br/></p></td>
+        </tr>
+         
+         
+         
+        <tr>
+                        <td><input type="checkbox" name="select_row" value="select_row" onchange="row_highlight(this)">
+                            <br/><img src = "down-arrow.png" width = "20" height = "20" onclick="rowExpand(this)">
+                        </td>
+                        <td>Michael</td>
+                        <td>Varun</td>
+                        <td>Approved</td>
+                        <td>1</td>
+                        <td>TA</td>
+                        <td>7000</td>
+                        <td>85</td>
+                        <td class= "hide"><input type="button" value="delete" onclick="delete_Row(this)" /></td>
+        </tr>
+        <tr class = "hide" >
+                        <td colspan ="9"  ><p>Advisor3: <br/><br/>Award Details:<br/> Summer 1-2014(TA)<br/>
+                        Budget Number<br/>Tuition Number<br/><br/>Comments:<br/></p></td>
+        </tr>
+        </tbody>
+     </table>
+    
+        
+     <button class = "disable" type="submit" disabled id="submit_awards" name ="submit_awards" onclick="submit_awards()">
+                        Submit Selected Awards
+     </button>
+     <button type="submit" name ="addrow" onclick="addRow()">
+                        Add Row
+     </button>
+
+     
+     <script src = "script.js"></script>
+</body>
+</html>

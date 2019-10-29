@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback</title>
+  <style>
+    label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+	  #fname,#lname,#email,#phone,#zip_code,#street,#error,#title-error,#area-error,#comment-error{
+		  width :40%;
+		  float: right;
+		  font-size: 0.8em;
+		  text-align: right;
+		 
+	  }
+  </style>
+ </head>
+ <body>
+ <div id="container">
+	 
+	 <main>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		 <br><br>
+		 <form method="post" action = "next.html" onsubmit="return form_Validate()" >
+			<label>Title*:</label>
+			<input type="radio" name="title" id="miss" value="miss"  onchange="radio_value(this)"/>Miss
+			<input type="radio" name="title" id="mr" value="mr"  onchange="radio_value(this)"/>Mr.
+			<input type="radio" name="title" id="mrs" value="mrs"  onchange="radio_value(this)"/>Mrs.
+			<div id ="title-error"></div>
+			<br><br>
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" placeholder="First Name" onfocus="return name_validate_onfocus()" onblur ="return name_validate_onblur()" /><div id="fname"></div>	
+			<br><br>
+			
+
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" placeholder="Last Name" onfocus="return lname_validate_onfocus()" onblur ="return lname_validate_onblur()" /><div id="lname"></div>
+			<br><br>
+			
+
+			<label for="emailId">Email Id*:</label>
+			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" onfocus="return email_validate_onfocus()" onblur ="return email_validate_onblur()" /><div id="email"></div>
+			<br><br>
+			
+
+			<label for="phoneNumber">Phone Number*:</label>
+			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" onfocus="return phone_validate_onfocus()" onblur ="return phone_validate_onblur()"/><div id="phone"></div>
+			<br><br>
+			
+            <label for="zipcode">ZipCode*:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx"  onfocus="return zip_validate_onfocus()" onblur ="return zip_validate_onblur()"/><div id="zip_code"></div>
+			<br><br>
+             
+            <label for="zipcode">How did you hear*:</label>
+			<input type='checkbox' name="source" value="facebook"  id ="fb" onclick="return fb_validate_onfocus(this)" /> Facebook
+            <input type='checkbox' name="source" value="google" id ="google"  onclick="return fb_validate_onfocus(this)"  /> Google
+			<input type='checkbox' name="source" value="yelp" id ="yelp"  onclick="return fb_validate_onfocus(this)"  /> Yelp 
+			<div id="error"></div>
+			<br><br> 
+
+            <label for="area">Area you Live in*:</label>
+			<select id ="area" onchange="show_checkbox(this)">
+				    <option value="none" id ="none"></option>
+					<option value="Boylston" id="yes" >Boylston</option>
+					<option value="Fenway" id ="fenway">Fenway</option>
+					<option value="Huntington Avenue" id ="hunt-ave">Huntington Avenue</option>
+					<option value="Masschussets Avenue" id ="mass-ave">Masschussets Avenue</option>
+					
+			</select><div id ="area-error"></div>
+			<br><br><br>
+
+			<div id="show-hide" style="display: none;">
+			   <label for="facilities">Facilities available in apartment:</label>
+			   
+				   <input name="utilities" type="checkbox" value="heat" id="heat" onchange = "show_textbox()">Heat
+				   <input name="utilities" type="checkbox" value="wifi" id="wifi" onchange = "show_textbox()">Wifi
+				   <input name="utilities" type="checkbox" value="microwave" id="microwave" onchange = "show_textbox()">Microwave
+                    <div id="utilities-error"></div>
+
+			   
+					
+					
+					
+			</div>
+			<br><br>
+			<!--
+
+			--><div id= "text-box-show-hide" style = "display:none;">
+					<label for="Street">Street Address*:</label>
+					<input type="text" name="address" id="street-addr" placeholder="xxxxxx"  
+					onfocus="return addr_validate_onfocus()" onblur ="return addr_validate_onblur()"/>
+					<div id="street"></div>
+			</div>
+			
+			<br><br>
+             
+			<label for="comments">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea><div id="comment-error"></div>
+			<br><br>
+			<input type="Submit" onclick="return form_Validate()">
+			<input type="Reset">
+			<br><br>
+		 </form>
+	 </main>
+ </div>
+
+ <script
+   src = "form_validation.js">
+ </script>
+
+ </body>
+</html>
