@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Crowd Flow</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#trending">Trending Now <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#browse">Browse Fundraiser</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#HowItWorks">How To Get Started</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#featured">Featured In</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div *ngIf="user;else login">
+        Welcome {{user}}
+        <a (click)="logout()"><button class="btn btn-outline-secondary" type="button">Logout</button></a>
+      </div>
+      <ng-template #login>
+        <a [routerLink]="['/login']"><button class="btn btn-outline-secondary" type="button">Login</button></a>
+
+        <a [routerLink]="['/signup']"><button class="btn btn-outline-secondary" type="button">SignUp</button></a>
+      </ng-template>
+    </form>
+  </div>
+</nav>

@@ -1,0 +1,19 @@
+{
+  "name": "usercreation",
+  "version": "1.0.0",
+  "description": "Assignment 8 User Creation Package",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "email-validator": "^2.0.4",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "mongoose": "^5.4.19",
+    "password-validator": "^4.1.1"
+  }
+}

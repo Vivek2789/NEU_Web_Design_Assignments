@@ -1,0 +1,46 @@
+<app-header></app-header>
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">{{status}}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <ul>
+        <li *ngFor="let r of result">
+          {{r}}
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    </div>
+  </ng-template>
+<div class="row">
+  <div class="col-4 m-auto p-3">
+      <h3 class="text-center">Create an account</h3>
+      <form (ngSubmit)="creteUser(content)">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input class="form-control" type="text" name="firstName" id="firstName" [(ngModel)]="model.firstName"/>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" class="form-control" type="text" name="lastName" id="lastName" [(ngModel)]="model.lastName"/>
+          </div>
+          <div class="form-group">
+            <label for="userName">Email</label>
+            <input class="form-control" type="text" name="email" id="email" [(ngModel)]="model.userName"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" [(ngModel)]="model.password"/>
+          </div>
+          <div>
+            <button class="btn btn-primary float-right">Sign Up</button>
+            <a [routerLink]="['/login']" class="btn btn-link">Login</a>
+          </div>
+        </form>
+  </div>
+</div>

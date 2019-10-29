@@ -1,0 +1,40 @@
+<app-header></app-header>
+<p>
+  Welcome {{name}}
+</p>
+<div class = "row">
+  <div class = "col-4 m-auto p-3">
+      <form (ngSubmit)="update(content)">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input class="form-control" type="text" name="firstName" id="firstName" [(ngModel)]="model.firstName"/>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" class="form-control" type="text" name="lastName" id="lastName" [(ngModel)]="model.lastName"/>
+          </div>
+          <div class="form-group">
+            <label for="userName">Email</label>
+            <input class="form-control" type="text" name="userName" id="userName" [(ngModel)]="model.userName"/>
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" name="password" id="password" [(ngModel)]="model.password"/>
+          </div>
+          <div>
+            <button type ="submit" class ="btn btn-primary" (click) = "open(content)" >Update</button>
+          </div>
+        </form>
+  </div>
+</div>
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>User Successfully updated</p>
+    </div>
+ </ng-template>
